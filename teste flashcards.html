@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flashcards</title>
+  <style>
+    .flashcard {
+      margin-bottom: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+      cursor: pointer;
+    }
+    .answer {
+      display: none;
+      margin-top: 10px;
+      font-style: italic;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="flashcard" onclick="toggleAnswer('answer1')">
+    <p><strong>Pergunta:</strong> O que é a lâmina basal e onde é visível?</p>
+    <div id="answer1" class="answer">
+      <p>A lâmina basal é uma camada fina entre as células epiteliais e o tecido conjuntivo, visível apenas ao microscópio eletrônico, com espessura de 20 a 100 nm.</p>
+    </div>
+  </div>
+
+  <div class="flashcard" onclick="toggleAnswer('answer2')">
+    <p><strong>Pergunta:</strong> Quais são os principais componentes da lâmina basal?</p>
+    <div id="answer2" class="answer">
+      <p>Colágeno tipo IV, laminina, entactina e proteoglicanos (ex: perlecan), além de fibrilas de ancoragem compostas por colágeno tipo VII.</p>
+    </div>
+  </div>
+
+  <div class="flashcard" onclick="toggleAnswer('answer3')">
+    <p><strong>Pergunta:</strong> Quais são as funções da lâmina basal?</p>
+    <div id="answer3" class="answer">
+      <p>1. Promover adesão entre células epiteliais e tecido conjuntivo.  
+      2. Filtrar moléculas e regular polaridade, proliferação e diferenciação celular.  
+      3. Organizar proteínas nas membranas das células adjacentes e afetar a transdução de sinais.  
+      4. Servir como suporte para migração celular e auxiliar na reinervação de células musculares.</p>
+    </div>
+  </div>
+
+  <div class="flashcard" onclick="toggleAnswer('answer4')">
+    <p><strong>Pergunta:</strong> O que é a lâmina reticular e qual sua relação com a lâmina basal?</p>
+    <div id="answer4" class="answer">
+      <p>A lâmina reticular é formada por fibras reticulares do tecido conjuntivo que estão associadas à lâmina basal.</p>
+    </div>
+  </div>
+
+  <div class="flashcard" onclick="toggleAnswer('answer5')">
+    <p><strong>Pergunta:</strong> Qual a diferença entre lâmina basal e membrana basal?</p>
+    <div id="answer5" class="answer">
+      <p>1. **Lâmina basal**: visível ao microscópio eletrônico, formada por lâmina densa e lâminas lúcidas.  
+      2. **Membrana basal**: visível ao microscópio de luz, mais espessa, inclui proteínas do tecido conjuntivo.</p>
+    </div>
+  </div>
+
+  <script>
+    function toggleAnswer(id) {
+      var answer = document.getElementById(id);
+      answer.style.display = (answer.style.display === "none" || answer.style.display === "") ? "block" : "none";
+    }
+  </script>
+
+</body>
+</html>
